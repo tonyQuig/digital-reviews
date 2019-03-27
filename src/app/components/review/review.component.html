@@ -1,0 +1,12 @@
+<div class="container-fluid ">
+  <div class="row" *ngFor="let review of $reviews | async">
+    <div class="col-1 md-padding">
+      <div class="circle">
+        {{ review.initials }}
+      </div>
+    </div>
+    <div class="col-11">
+      <blockquote>{{ review.text }} - {{ review.user }}</blockquote>
+    </div>
+  </div>
+</div>

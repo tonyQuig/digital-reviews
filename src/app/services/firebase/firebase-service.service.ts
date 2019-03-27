@@ -26,8 +26,9 @@ export class FirebaseService {
           review.push({
             key: doc.id,
             title: data.title,
-            name: data.name,
-            text: data.text
+            user: data.user,
+            text: data.text,
+            initials: data.initials,
           });
         });
         observer.next(review);

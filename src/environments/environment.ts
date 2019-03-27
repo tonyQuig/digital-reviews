@@ -11,7 +11,9 @@ export const environment = {
     projectId: "screen-cloud-f8c9a",
     storageBucket: "screen-cloud-f8c9a.appspot.com",
     messagingSenderId: "933948910394"
-  }
+  },
+  googlePlacesBasePath: 'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?&AIzaSyCp2wDN9wfLzBedC_IO00ImgD5sHsVY9mU',
+  googleServerBasePath: 'http://localhost:8000/api',
 };
 
 /*

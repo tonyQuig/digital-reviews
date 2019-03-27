@@ -1,0 +1,30 @@
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  font-size: 1.5em;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 90px;
+  background-color: orange;
+  text-align: center;
+  display: table-cell;
+  overflow: hidden;
+  vertical-align: middle;
+  font-size: 2em;
+  color: white;
+}

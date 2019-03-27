@@ -1,5 +1,8 @@
-<div *ngFor="let review of $reviews | async">
-  <h1>
-    {{ review.title }}
-  </h1>
+
+
+<!-- To be used when google api works. -->
+<!-- <input [(ngModel)]="query" type="text" #ctrl="ngModel"/>
+<button *ngIf="query" (click)="getGooglePlaces()">Get Place</button> -->
+<div class="content-wrapper">
+    <router-outlet></router-outlet>
 </div>

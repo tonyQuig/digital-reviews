@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.content-wrapper {
+    padding: 2%;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.md-padding{
+    padding-top: 1.5%;
+}
