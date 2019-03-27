@@ -1,0 +1,9 @@
+<p>
+  Select a location in order to display your reviews.
+</p>
+<select [(ngModel)]="location">
+  <option value="0">Select..</option>
+  <option *ngFor="let location of $locations | async" value="{{location.location}}">
+    {{ location.location }}
+  </option>
+</select>

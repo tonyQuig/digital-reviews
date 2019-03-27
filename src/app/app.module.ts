@@ -11,16 +11,19 @@ import { ApiService } from './services/api/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReviewComponent } from './components/review/review.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AdminComponent } from './components/admin/admin/admin.component';
 firebase.initializeApp(environment.firebase);
 
 const appRoutes: Routes = [
   { path: '', component: ReviewComponent },
+  { path: 'admin', component: AdminComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReviewComponent
+    ReviewComponent,
+    AdminComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

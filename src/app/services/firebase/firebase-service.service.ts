@@ -29,6 +29,7 @@ export class FirebaseService {
             user: data.user,
             text: data.text,
             initials: data.initials,
+            location: data.location,
           });
         });
         observer.next(review);
