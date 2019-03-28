@@ -15,6 +15,7 @@ export class ReviewComponent implements OnInit {
   public reviews;
   public reviewsToDisplay;
   public locationFromLocalStorage: Location;
+  public interval;
 
   constructor(public _firebaseService: FirebaseService, private _appService: AppService, private _api: ApiService) {
   }
@@ -42,7 +43,13 @@ export class ReviewComponent implements OnInit {
   }
 
   ngOnInit() {
+    //Initally load the data
     this.load();
+
+    // refresh data every 1 min
+    setInterval(() => {
+      this.load();
+    }, 60000);
   }
 
 }
