@@ -1,9 +1,27 @@
 <p>
-  Select a location in order to display your reviews.
+  Input a location in order to display your reviews.
 </p>
-<select [(ngModel)]="location">
-  <option value="0">Select..</option>
-  <option *ngFor="let location of $locations | async" value="{{location.location}}">
-    {{ location.location }}
-  </option>
-</select>
+<input [(ngModel)]="query" type="text" #ctrl="ngModel" />
+<button *ngIf="query" (click)="getGooglePlaces()">Get Place</button>
+
+<table *ngIf="$locations | async" class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let location of $locations | async">
+      <th scope="row">{{ location.name }}</th>
+      <td>{{ location.formatted_address }}</td>
+      <td>
+        <button (click)="selectedLocation(location)" type="button" class="btn btn-primary">Select</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<button *ngIf="showReviewsButton"  routerLink="/reviews" type="button" class="btn btn-success">View reviews for selected location.</button>
+

@@ -2,11 +2,11 @@
   <div class="row" *ngFor="let review of $reviews | async">
     <div class="col-1 md-padding">
       <div class="circle">
-        {{ review.initials }}
+        <img [src]="review.profile_photo_url"/>
       </div>
     </div>
     <div class="col-11">
-      <blockquote>{{ review.text }} - {{ review.user }}</blockquote>
+      <blockquote>{{ review.text }} - {{ review.author_name }}</blockquote>
     </div>
   </div>
 </div>

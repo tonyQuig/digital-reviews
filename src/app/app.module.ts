@@ -12,11 +12,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReviewComponent } from './components/review/review.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './components/admin/admin/admin.component';
+import { AppService } from './app.service';
 firebase.initializeApp(environment.firebase);
 
 const appRoutes: Routes = [
   { path: '', component: ReviewComponent },
-  { path: 'admin', component: AdminComponent }
+  { path: 'admin', component: AdminComponent },
+  { path: 'reviews', component: ReviewComponent }
 ];
 
 @NgModule({
@@ -37,7 +39,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     FirebaseService,
-    ApiService
+    ApiService,
+    AppService
   ],
   bootstrap: [AppComponent]
 })

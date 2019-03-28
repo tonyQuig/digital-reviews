@@ -18,6 +18,12 @@ export class ApiService {
   }
 
   getPlaceFromServerWithQuery(query?: string) {
+    console.log('Query: ', query);
     return this._http.get(`${environment.googleServerBasePath}/query/` + query)
+  }
+
+  getPlaceDetailsFromServerWithQuery(query?: string) {
+    console.log('Place details: ', query);
+    return this._http.get(`${environment.googleServerBasePath}/query/details/` + query)
   }
 }

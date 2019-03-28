@@ -30,10 +30,6 @@ export class AppComponent implements OnInit {
   constructor(public _firebaseService: FirebaseService, private _api: ApiService) {
   }
 
-  getGooglePlaces() {
-    this.$place = this._api.getPlaceFromServerWithQuery(this.query);
-  }
-
   ngOnInit() {
   }
 }
