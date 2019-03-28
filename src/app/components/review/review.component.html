@@ -1,5 +1,5 @@
 <div class="container-fluid ">
-  <div class="row" *ngFor="let review of $reviews | async">
+  <div class="row" *ngFor="let review of reviews">
     <div class="col-1 md-padding">
       <div class="circle">
         <img [src]="review.profile_photo_url"/>
@@ -10,3 +10,4 @@
     </div>
   </div>
 </div>
+

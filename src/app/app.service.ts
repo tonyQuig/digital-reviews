@@ -14,5 +14,7 @@ export class AppService {
 
   setSelectedLocation(locationToSet: Object) {
     this.$selectedLocation.next(locationToSet);
+    localStorage.setItem('selectedLocation', JSON.stringify(locationToSet));
+
   }
 }
